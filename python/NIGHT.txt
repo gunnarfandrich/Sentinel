@@ -1,0 +1,1 @@
+Night Mode detected: solar panel below 3.5 V
