@@ -1,1 +1,0 @@
-ALERT: CHARGING DISABLED /n 5V power is disabled due to low-battery or night condtion
