@@ -18,7 +18,6 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 * Memory: 8GB LPDDR5
   * 128-bit Width, 68 GB/s
 
-
 ### Storage
 * 512gb PCIe x4 NVME
 
@@ -29,7 +28,8 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 * (One) RJ45 Gigabit Ethernet Connection
 
 ### Expansion
-* (Not currently in use) PCIe x1 slot
+* (Not currently in use) M.2 M-Key PCIe x1 slot
+* (Not currently in use) TF/SD Card Slot
 
 ### Power Consumption
 * 15W
