@@ -9,6 +9,7 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 * Nvidia Jetson Orin Nano
 
 ### Compute
+#### Jetson Orin Nano Developer Kit
 * 40 TOPS
 * 1024-core NVIDIA Ampere architecture GPU with 32 Tensor Cores
 * GPU: 625 MHz
@@ -17,6 +18,8 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
   * Max Frequency: 1.5 GHz
 * Memory: 8GB LPDDR5
   * 128-bit Width, 68 GB/s
+
+
 
 ### Storage
 * 512gb PCIe x4 NVME
