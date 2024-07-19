@@ -18,6 +18,40 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 
 ### Compute
 #### Jetson Orin Nano Developer Kit
+
+
+<table>
+<tr>
+<th> Good </th>
+<th> Bad </th>
+</tr>
+<tr>
+<td>
+
+```c++
+int foo() {
+    int result = 4;
+    return result;
+}
+```
+
+</td>
+<td>
+
+```c++
+int foo() { 
+    int x = 4;
+    return x;
+}
+```
+
+</td>
+</tr>
+</table>
+
+
+
+
 * 40 TOPS
 * 1024-core NVIDIA Ampere architecture GPU with 32 Tensor Cores
 * GPU: 625 MHz
