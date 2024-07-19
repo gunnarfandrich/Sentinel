@@ -14,6 +14,10 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 * GPU: 625 MHz
 * CPU: 6-core Arm® Cortex®-A78AE v8.2 64-bit CPU
   * Cache: 1.5MB L2 + 4MB L3
+  * Max Frequency: 1.5 GHz
+* Memory: 8GB LPDDR5
+  * 128-bit Width, 68 GB/s
+
 
 ### Storage
 * 512gb PCIe x4 NVME
