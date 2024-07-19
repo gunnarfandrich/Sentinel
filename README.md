@@ -9,15 +9,23 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 * Nvidia Jetson Orin Nano
 
 ### Compute
+* 40 TOPS
+* 1024-core NVIDIA Ampere architecture GPU with 32 Tensor Cores
+* GPU: 625 MHz
+* CPU: 6-core Arm® Cortex®-A78AE v8.2 64-bit CPU
+  * Cache: 1.5MB L2 + 4MB L3
 
+### Storage
+* 512gb PCIe x4 NVME
 
 ### Connectivity
 * 802.11AC WiFi
-* 
+* LoRaWAN
+* (Not currently in use) Bluetooth 5.0
 * (One) RJ45 Gigabit Ethernet Connection
 
 ### Expansion
-* 
+* (Not currently in use) PCIe x1 slot
 
 ### Power Consumption
 * 15W
