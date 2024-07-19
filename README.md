@@ -22,29 +22,15 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 
 <table>
 <tr>
-<th> Good </th>
-<th> Bad </th>
+<th></th>
+<th></th>
 </tr>
 <tr>
 <td>
-
-```c++
-int foo() {
-    int result = 4;
-    return result;
-}
-```
-
+Hi 1
 </td>
 <td>
-
-```c++
-int foo() { 
-    int x = 4;
-    return x;
-}
-```
-
+HI 2
 </td>
 </tr>
 </table>
