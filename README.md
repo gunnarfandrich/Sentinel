@@ -20,7 +20,13 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
   * 128-bit Width, 68 GB/s
 
 #### Particle Photon 2
-* 
+* Realtek RTL8721DM MCU
+  * ARM Cortex M33 CPU
+  * Max Frequency: 200 MHz
+  * Memory: 3072 KB
+  * Program Storage: 2048 KB
+* 802.11a/b/g/n Wi-Fi, 2.4 GHz and 5 GHz
+* Bluetooth Low Energy 5.0
 
 ### Storage
 * 512gb PCIe M.2 Gen3 M-Key x4 NVME
