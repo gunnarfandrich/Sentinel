@@ -27,4 +27,4 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 ## Documentation
 * Jetson Orin Flashing
 
-Last Updated: 1/9/23
+Last Updated: 7/19/24
