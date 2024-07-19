@@ -7,6 +7,14 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 ### Components
 * (Two) Intel RealSense D415
 * Nvidia Jetson Orin Nano
+* AB02S LoRaWAN Module
+* BME280 Temperature, Humidity, Pressure Sensor
+* DS1307 Real Time Clock
+* Ultimate GPS Module
+* E-Ink Display
+* Microcontroller Managed Power Switch
+* SwitchDoc Labs Grove/Pin Dual WatchDog Timer
+* DFRobot Solar Power Manager
 
 ### Compute
 #### Jetson Orin Nano Developer Kit
@@ -43,8 +51,8 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 * (Two) MIPI CSI-2 22-pin Camera Connector
 
 ### Power Consumption
-* 7W to 15W, dependent on CPU power configuration.
-
+* Jetson: 7W to 15W, dependent on CPU power configuration.
+* Particle: 2.5W, theoretical maximum
 
 
 ## Documentation
