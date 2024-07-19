@@ -19,10 +19,11 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 * Memory: 8GB LPDDR5
   * 128-bit Width, 68 GB/s
 
-
+#### Particle Photon 2
+* 
 
 ### Storage
-* 512gb PCIe x4 NVME
+* 512gb PCIe M.2 Gen3 M-Key x4 NVME
 
 ### Connectivity
 * 802.11AC WiFi
@@ -30,12 +31,13 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 * (Not currently in use) Bluetooth 5.0
 * (One) RJ45 Gigabit Ethernet Connection
 
-### Expansion
-* (Not currently in use) M.2 M-Key PCIe x1 slot
-* (Not currently in use) TF/SD Card Slot
+### Expansion (Not currently in use)
+* M.2 Gen3 M-key x2 Slot
+* UHS-1 with SDR104 Mode TF/SD Card Slot
+* (Two) MIPI CSI-2 22-pin Camera Connector
 
 ### Power Consumption
-* 15W
+* 7W to 15W, dependent on CPU power configuration.
 
 
 
