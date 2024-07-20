@@ -32,7 +32,7 @@ A variant of the Jetson Orin Nano, or a variant of the older Jetson Nano (An inc
 <tr>
 <td>
  
-** Jetson Orin Nano Developer Kit
+Jetson Orin Nano Developer Kit
 * Dev-22098
   * 8gb Model, without EMMC. Requires an NVME storage device to be installed.
 > **NOTE**  
@@ -55,7 +55,7 @@ A variant of the Jetson Orin Nano, or a variant of the older Jetson Nano (An inc
 <tr>
 <td>
 
-** Jetson Nano Developer Kit 
+Jetson Nano Developer Kit 
 * P3448-0003
   * 2GB model, without EMMC. Requires an SD card for the OS
 to be installed to.
