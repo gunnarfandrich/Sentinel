@@ -44,7 +44,7 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 #### Particle Photon 2
 
 
-<table>
+<table2>
 <tr>
 <th>Specifications</th>
 <th>Component View</th>
@@ -63,7 +63,7 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 ![alt](./images/photon2.png)
 </td>
 </tr>
-</table>
+</table2>
 
 
 
