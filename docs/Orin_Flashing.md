@@ -69,9 +69,7 @@ Jetson AGX Orin Developer Kit
 
 <img src="../images/flashing/nano.png" width="400"/>
 
-
 <img src="../images/flashing/xavier.png" width="400"/>
-
 
 <img src="../images/flashing/orin_agx.png" width="400"/>
 
