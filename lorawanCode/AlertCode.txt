@@ -1,0 +1,18 @@
+// This code is used to send e-mails to the user. 
+// Combine with 'react' to set up automatic emailing. 
+ 
+% Channel IDs and ReadAPI Keys
+channel_ID = XXXXXX; // your channelID goes here
+readAPIKey = 'XXXXXXXXXXXXXX'; // your readAPIKey goes here
+
+lon_num = thingSpeakRead(channel_ID, 'ReadKey', readAPIKey, 'Fields', [1]);
+lat_num = thingSpeakRead(channel_ID, 'ReadKey', readAPIKey, 'Fields', [2]);
+lon_str = num2str(lon_num,'%.5f');
+lat_str = num2str(lat_num,'%.5f');
+alert_body = ['Emergency flag triggered!\nCurrent Position:\nLongitude: ' lon_str '\nLatitude: ' lat_str ''];
+alert_subject = 'SENTINEL ALERT';
+alert_api_key = 'XXXXXXXXXXXXXX'; // your alert API key goes here (should start with TAK)
+alert_url= "https://api.thingspeak.com/alerts/send";
+jsonmessage = sprintf(['{"subject": "%s", "body": "%s"}'], alert_subject,alert_body);
+options = weboptions("HeaderFields", {'Thingspeak-Alerts-API-Key', alert_api_key; 'Content-Type','application/json'});
+result = webwrite(alert_url, jsonmessage, options);
