@@ -36,7 +36,7 @@ module within the D415 camera to perform depth
 calculations.
 
 <p align="center">
-<img src="../images/d415.png" width="400"/>
+<img src="../images/hardwareComponents/d415.png" width="400"/>
 </p>
 
 Upgrading to the D415 cameras has broadened the
@@ -120,7 +120,7 @@ iterations could send additional information to the AB02S
 using other communication protocols such as I2C or UART.
 
 <p align="center">
-<img src="../images/ab02s.png" width="400"/>
+<img src="../images/hardwareComponents/ab02s.png" width="400"/>
 </p>
 
 ### BME280 Temperature/Humidity/Pressure Sensor
@@ -133,7 +133,7 @@ this sensor adds to the data set that will eventually be used
 to train the AI model.
 
 <p align="center">
-<img src="../images/bme280.png" width="400"/>
+<img src="../images/hardwareComponents/bme280.png" width="400"/>
 </p>
 
 ### DS1307 Real Time Clock
@@ -152,7 +152,7 @@ using I2C, and is read at the beginning of each loop to see
 whether or not a picture needs to be taken.
 
 <p align="center">
-<img src="../images/ds1307.png" width="400"/>
+<img src="../images/hardwareComponents/ds1307.png" width="400"/>
 </p>
 
 ### Ultimate GPS Module
@@ -170,7 +170,7 @@ receiving a signal in some buildings, such as the NEB
 design room.
 
 <p align="center">
-<img src="../images/ultimate_GPS.png" width="400"/>
+<img src="../images/hardwareComponents/ultimate_GPS.png" width="400"/>
 </p>
 
 ### E-Ink Display
@@ -184,7 +184,7 @@ writing messages diagonally on the screen, but the message
 is still legible in most cases.
 
 <p align="center">
-<img src="../images/eink.png" width="400"/>
+<img src="../images/hardwareComponents/eink.png" width="400"/>
 </p>
 
 ### Microcontroller Managed Power Switch
@@ -236,7 +236,7 @@ reset will then send the signal to ground for approximately
 allowing the system to start over again.
 
 <p align="center">
-<img src="../images/watchdog.png" width="400"/>
+<img src="../images/hardwareComponents/watchdog.png" width="400"/>
 </p>
 
 ### Power management: DFRobot Solar Power Manager
@@ -250,7 +250,7 @@ the system can be powered and run the Photon Particle 2
 and the Orin with the correct voltage.
 
 <p align="center">
-<img src="../images/solar.png" width="400"/>
+<img src="../images/hardwareComponents/solar.png" width="400"/>
 </p>
 
 
