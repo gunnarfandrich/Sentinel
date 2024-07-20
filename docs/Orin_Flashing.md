@@ -21,7 +21,7 @@ flashing a Jetson due to its lack in storage capacity.
 
 ### Required Hardware
 
-* A variant of the Jetson Orin Nano, or a variant of the older Jetson Nano (variants are listed below)
+A variant of the Jetson Orin Nano, or a variant of the older Jetson Nano (variants are listed below)
 
 ** Jetson Orin Nano Developer Kit
 * Dev-22098
