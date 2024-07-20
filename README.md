@@ -97,4 +97,4 @@ Particle Photon 2
 * [Sentinel Hardware Components](./docs/Hardware_Components.md)
 * [Sentinel Software Overview](./docs/Software_Overview.md)
 
-Last Updated: 7/19/24
+Last Updated: 7/20/24
