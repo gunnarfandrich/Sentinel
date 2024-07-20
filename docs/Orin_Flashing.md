@@ -17,7 +17,7 @@ flash a Jetson Nano and its variants. Other linux distributions may work, though
 > **NOTE**  
 > It would be advised to simply install Ubuntu to a removable storage device (such as an SD card
 or USB drive) to avoid issues with installing to your main computer. A Live-CD cannot be used for
-flashing a Jetson due to its lack in storage capacity.'''
+flashing a Jetson due to its lack in storage capacity.
 
 ### Required Hardware
 Jetson Nano Developer Kit (variants are listed below)
