@@ -209,6 +209,10 @@ in the appendix. When the microcontroller needs to turn on
 either the Orin or LoRaWAN module it simply sends a 3.3V
 output pulse from a GPIO pin to the gate of the NMOS.
 
+<p align="center">
+<img src="../images/hardwareComponents/switch_schem.png" width="400"/>
+</p>
+
 ### The SwitchDoc Labs Grove/Pin Dual WatchDog Timer
 A watchdog timer is a hardware or software
 mechanism used in computer systems to detect and recover
