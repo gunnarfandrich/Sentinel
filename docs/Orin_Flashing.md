@@ -286,13 +286,26 @@ will have to repeat the process. If flashing a Jetson without EMMC, ensure an SD
 
 
 The device will now flash. The execution process can be monitored via the sdkmanager.
-NOTE: Be sure to not unplug the power supply or the connection to the computer from the device
+
+<img src="../images/flashing/flash_progress.png"/>
+
+> **NOTE**  
+> Be sure to not unplug the power supply or the connection to the computer from the device
 during flashing. It would be wise to also ensure the flashing computer is not set to sleep, to avoid
 flashing problems. Sleep can be configured from Settings/Power in Ubuntu.
+
 Let the device flash and follow any prompts from the sdkmanager. The sdkmanager will create a usbinternet
 tunnel into the device and configure the username and password as entered.
-Post-Installation
+
+### Post-Installation
+
 As a tunnel to the device was created during installation, now is an optimal time to install any missing
 packages. The IP of the device can be found with nmcli via the terminal. The default IP is:
+```sh
 192.168.55.1
+```
+
 SSH into the device as necessary nvidia@192.168.55.1 and install missing packages, such as WIFI, etc.
+
+> **NOTE**
+> If you changed the username, you would SSH into the device with username@192.168.55.1
