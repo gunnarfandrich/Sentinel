@@ -89,8 +89,31 @@ card.
 
 <img width=800/>
 
+Jetson Xavier NX Developer Kit
+* (Model number is unknown, but the internal PN is: 812674024318)
+  * 16GB model, with 16GB EMMC.
+
+</td>
+<td>
+
+<img src="../images/flashing/xavier.png" width="400"/>
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<th>Variant</th>
+<th>Device View</th>
+</tr>
+<tr>
+<td>
+
+<img width=800/>
+
 Jetson AGX Orin Developer Kit
-* (Unknown, but the internal PN is: 945-13730-0000-000)
+* (Model number is unknown, but the internal PN is: 945-13730-0000-000)
   * 64GB model, with 64GB EMMC.
 
 </td>
