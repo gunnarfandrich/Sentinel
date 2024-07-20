@@ -34,7 +34,7 @@ A variant of the Jetson Orin Nano, or a variant of the older Jetson Nano (An inc
 
 Jetson Orin Nano Developer Kit
 * Dev-22098
-  * 8gb Model, without EMMC. Requires an NVME storage device to be installed.
+  * 8GB Model, without EMMC. Requires an NVME storage device to be installed.
   
 > **NOTE**  
 > Alternatively use a USB or SD Card, though these devices will be extremely slow and will face accelerated flash degredation in comparison to an NVME and are not recommended.
@@ -163,65 +163,124 @@ ensure a stable power supply while flashing.
 
 ## Flashing and Software Installation Process
 
+### SDK Manager Installation
 
-Navigate to https://developer.nvidia.com/sdk-manager and download the .deb file.
+Navigate to the [Nvidia Website](https://developer.nvidia.com/sdk-manager) and download the appropriate package file for your desired operating system. For ubuntu, select the .deb file.
 
+<img src="../images/flashing/login.png"/>
 
 Open a terminal and cd to the location of the downloaded file:
+```sh
 cd ~/Downloads
+```
+
 Attempt to install the sdkmanager:
+```sh
 sudo dpkg -i sdkmanager*.deb
+```
 
-
+<img src="../images/flashing/sdkmanager.png"/>
 
 It is likely some dependencies will be missing. Common dependencies can be installed with the
-following command.
+following command:
+
+```sh
 sudo apt-get install libgconf-2-4 libcanberra-gtk-module gconf-service gconf2-common
 libcanberra-gtk0 gconf-service-backend
-NOTE: If any additional dependencies are required, simply review the terminal log to find the missing
-packages and install with:
-sudo apt-get install <package name>
-ex: sudo apt-get install libgconf-2-4
+```
 
+<img src="../images/flashing/dependencies.png"/>
+
+
+> **NOTE**
+>  If any additional dependencies are required, simply review the terminal log to find the missing
+packages and install them. An example is given below:
+> ```sh
+> sudo apt-get install libgconf-2-4
+> ```
 
 After installing necessary dependencies, attempt to install the sdkmanager again.
+```sh
 sudo dpkg -i sdkmanager*.deb
+```
+
 If no errors occur, proceed to the next step. Else, install any missing packages and repeat the install step
 prior.
+
 Once the sdkmanager is successfully installed without any errors, it may be launched with:
+```sh
 sdkmanager
+```
+
 On first launch, it will be necessary to sign into an Nvidia account to proceed. Once signed in, an
 update window may open. Install updates as necessary and allow the sdkmanager to reopen.
-Flashing Nvidia Jetson Nano Developer Kit
-By: Gunnar Fandrich
-April 30, 2023
+
+<img src="../images/flashing/nvidia_update.png"/>
+
+### Jetson Pre-Installation Preparation
+
 Set the Jetson Nano Development kit to boot in recovery mode. This is done by utilizing a computer
 jumper or female to female jumper wire to bridge the ‘FC_REC’ pin to any GND pin. The module has
 been removed from its daughterboard in the following pictures to illustrate such process.
 
 
+<p align="center">
+ <img src="../images/flashing/board_without_jumper.png" width="500"/>
+</p>
+
+
+<p align="center">
+ <img src="../images/flashing/board_with_jumper.png" width="500"/>
+</p>
+
+
+<p align="center">
+ <img src="../images/flashing/board_with_jumper2.png" width="500"/>
+</p>
+
 Once the recovery pin has been connected to ground, connect the power supply and Micro-USB or
 USB-C cable to the computer running Ubuntu.
 
+<p align="center">
+ <img src="../images/flashing/ready_to_flash.png" width="500"/>
+</p>
 
+
+### Jetson Flashing
+
+#### Step 01
 The sdkmanager should now auto-detect that a compatible device was connected.
-Select your appropriate device as listed on Pg. 1
-Pick an OS- Jetpack 4.6.3 will suffice.
-No additional SDKs are necessary to install.
-Proceed to Step 02.
 
+<img src="../images/flashing/nvidia_detected.png"/>
+
+
+* Select your appropriate device as listed on Pg. 1
+* Pick an OS- The newest will typically be sufficient, though your mileage may vary.
+* No additional SDKs are necessary to install.
+* Proceed to Step 02.
+
+#### Step 02
 
 Now select the software to be installed. It is fine to select all components. Read and accept the terms
 and conditions given by Nvidia to proceed.
-The device will now download the required software before flashing. Once complete, Step 03 will be
+
+<img src="../images/flashing/nvidia_package_selection.png"/>
+
+
+Your device will now download the required software before flashing. Once complete, Step 03 will be
 available to proceed to.
 
+#### Step 03
 
-A window will open prompting the configuration of the Jetson. Your device should be the same as
+* A window will open prompting the configuration of the Jetson. Your device should be the same as
 selected prior. If not, select the correct device in the top drop-down menu.
-Select the manual setup pertaining to the model you selected prior.
-Select Pre-Config and choose a username and password.
-NOTE: in this example, the Username and Password are “nvidia” and a 2GB board without EMMC is
+* Select the **manual setup** pertaining to the model you selected prior.
+* Select **Pre-Config** and choose a username and password.
+
+<img src="../images/flashing/nvidia_device_selection.png"/>
+  
+> **NOTE**  
+> In this example, the Username and Password are “nvidia” and a 2GB board without EMMC is
 being flashed. MAKE SURE to select your correct board type and MANUAL method, otherwise you
 will have to repeat the process. If flashing a Jetson without EMMC, ensure an SD card is inserted.
 
