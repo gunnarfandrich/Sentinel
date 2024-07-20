@@ -80,7 +80,7 @@ Particle Photon 2
 * (One) RJ45 Gigabit Ethernet Connection
 
 ### Expansion (Not currently in use)
-* M.2 Gen3 M-key x2 Slot
+* PCIe M.2 Gen3 M-key x2 Slot
 * UHS-1 with SDR104 Mode TF/SD Card Slot
 * (Two) MIPI CSI-2 22-pin Camera Connector
 
