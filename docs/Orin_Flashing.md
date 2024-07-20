@@ -127,7 +127,7 @@ pinch.
 <td>
 
 (Micro-USB or USB-C) cable
-  * Depending on the model daughterboard to be flashed, a Micro-
+  * Depending on the model daughter-board to be flashed, a Micro-
 USB or USB-C cable is needed to connect the board to another
 computer.
 
