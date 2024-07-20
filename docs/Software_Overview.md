@@ -302,37 +302,75 @@ disconnected.
 
 ## Jetson Orin Nano Software
 
-On boot, the Orin runs a shell script using Ubuntu’s
-“Startup Applications” manager. This shell script, titled
-“build.sh”, first compiles the .cpp program made to capture
-a single RGB and depth frame from both D415 cameras,
+On boot, the Jetson Orin runs a shell script, "build.sh" using Ubuntu’s
+“Startup Applications” manager.
+
+### Build.sh Script
+
+```sh
+#compile code
+#g++ SingleFrameCaptureRealSense.cpp -o output -lGLU -lglut -lopencv_core -lrealsense2 -lopencv_imgproc -lopencv_imgcodecs
+```
+
+Seen in the code snippet above, "build.sh" first compiles the .cpp program made
+to capture a single RGB and depth frame from both D415 cameras,
 however this only needs to be compiled once, thus it is
-commented out for the remainder of the Mini III’s operation
-until changes need to be made to the program. After
-compiling the frame capture program, the shell script runs
+commented out for the remainder of the Sentinel's field operation
+until changes need to be made to the program.
+
+More information about the frame capture program can be
+found [here](./docs/ImageCaptureProgram.md)
+
+
+After compiling the frame capture program, the shell script runs
 the python script to gather weather data from the BME280
 sensor and stores it with the given date to the Weather
-folder. The next step is running the output of the frame
-capture program, at which point the Mini III actually
+folder.
+
+```sh
+# gather weather data
+echo "Capturing Weather Data"
+python /home/nvidia/Documents/sentinel_home/NewBMECode.py
+```
+
+The next step is running the output of the frame
+capture program, at which point the Sentinel
 captures depth and RGB images from both D415 cameras
 and stores them with the appropriate date to the
-PlantPictures folder on the Orin. The remaining code in the
+**PlantPictures** folder on the Orin.
+
+```sh
+# gather camera data
+./output
+```
+
+The remaining code in the
 shell script simply mounts a USB, if connected on startup,
 and copies all of the gathered images and weather data onto
 it. This allows the user to quickly gather all data from the
-Mini III if physically present.
-Apart from the startup code, there was other
-software used in experimentation that came directly from
-Intel’s RealSense code repository. This includes the Intel
+Sentinel.
+
+```sh
+# mount usb if exists
+echo "Mounting USB device if it exists"
+sudo mount /dev/sda1 /USB_Transfer
+
+# copy files to usb
+echo "Copying files to USB device if present and mounted"
+cp -a /home/nvidia/Documents/sentinel_home/Weather/WeatherInformation /USB_Transfer
+cp -a /home/nvidia/Documents/sentinel_home/PlantPictures/TakenImages /USB_Transfer
+```
+
+In addition to the startup code, other
+software was utilized in experimentation that came
+directly from [Intel’s RealSense code repository](). This includes the Intel
 RealSense SDK which was used to gather high quality RGB
 and depth data of field and greenhouse plants, the
 librealsense convert tool (rs-convert.cpp), used to convert
 this gathered data to a usable form, and finally the
 librealsense measure tool (rs-measure.cpp) which was used
 to verify the accuracy of the cameras’ depth measurements
-by measuring plant features captured by both cameras (see
-Experimentation section).
-
+by measuring plant features captured by both cameras.
 
 ## AB02S LoRaWAN Software & ThingSpeak
 
