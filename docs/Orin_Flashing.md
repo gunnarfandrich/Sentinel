@@ -33,12 +33,27 @@ A variant of the Jetson Orin Nano, or a variant of the older Jetson Nano (An inc
 <td>
 
 <img width=800/>
- 
+
+
 Jetson Orin Nano Developer Kit
 * Dev-22098
   * 8gb Model, without EMMC. Requires an NVME storage device to be installed.
 > **NOTE**  
 > Alternatively use a USB or SD Card, though these devices will be extremely slow and will face accelerated flash degredation in comparison to an NVME and are not recommended.
+
+</td>
+
+<td>
+ 
+<img src="../images/JetsonOrin.png" width="400"/>
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+
 
 Jetson Nano Developer Kit 
 * P3448-0003
@@ -51,31 +66,39 @@ to be installed to.
   * 4GB model, with 16GB EMMC. Does NOT require an SD
 card.
 
-Jetson Xavier NX Developer Kit
-* (Model number is unknown, but the internal PN is: 812674024318)
-  * 16GB model, with 16GB EMMC.
-
-Jetson AGX Orin Developer Kit
-* (Model number is unknown, but the internal PN is: 945-13730-0000-000)
-  * 64GB model, with 64GB EMMC.
-
-
 </td>
+
 <td>
 
-<img src="../images/JetsonOrin.png" width="400"/>
-
 <img src="../images/flashing/nano.png" width="400"/>
-
-<img src="../images/flashing/xavier.png" width="400"/>
-
-<img src="../images/flashing/orin_agx.png" width="400"/>
-
 
 </td>
 </tr>
 </table>
 
+
+
+Jetson Xavier NX Developer Kit
+* (Model number is unknown, but the internal PN is: 812674024318)
+  * 16GB model, with 16GB EMMC.
+
+
+Jetson AGX Orin Developer Kit
+* (Model number is unknown, but the internal PN is: 945-13730-0000-000)
+  * 64GB model, with 64GB EMMC.
+
+ 
+
+<img src="../images/JetsonOrin.png" width="400"/>
+
+
+<img src="../images/flashing/nano.png" width="400"/>
+
+
+<img src="../images/flashing/xavier.png" width="400"/>
+
+
+<img src="../images/flashing/orin_agx.png" width="400"/>
 
 
 <table>
