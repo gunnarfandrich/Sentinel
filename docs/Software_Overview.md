@@ -27,6 +27,38 @@ The Photon P2 brings the ultimate GPS module online during the communication ini
 
 Upon finishing initialization, the Photon P2 enters the main program loop.
 
+```c
+
+DateTime now = rtc.now();
+Rmc rmc = Rmc(gps);
+
+Particle.process();
+
+// If a week has passed, pull the gps time and update
+if (now.day() % 7 == 0)
+{
+    // Get Time and Parse
+    int gpsUTCTime = rmcGetTime().toInt();
+    int gpsDate = rmcGetDate().toInt();
+
+    // UTC Time Parse
+    int utcHour = gpsUTCTime / 10000;
+    int utcMin = (gpsUTCTime / 100) % 100;
+    int utcSec = gpsUTCTime % 100;
+
+    // UTC Date Parse
+    int gpsMM = gpsDate / 10000;
+    int gpsDD = (gpsDate / 100) % 100;
+    int gpsYY = gpsDate % 100;
+
+    // Adjust RTC Time if innaccurate & GPS has signal
+    if ((now.hour() != utcHour || now.minute() != utcMin || now.second() != utcSec) && rmc.northSouthIndicator[0] != '\0')
+    {
+        rtc.adjust(DateTime(gpsYY, gpsMM, gpsDD, utcHour, utcMin, utcSec));
+    }
+}
+```
+
 
 
 After setup is complete, the
