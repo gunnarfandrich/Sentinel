@@ -17,15 +17,16 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 * DFRobot Solar Power Manager
 
 ### Compute
-#### Jetson Orin Nano Developer Kit
 
-<table>
+<table border=1 frame=void rules=rows>
 <tr>
 <th>Specifications</th>
 <th>Component View</th>
 </tr>
 <tr>
 <td>
+
+Jetson Orin Nano Developer Kit
  
 * 40 TOPS
 * 1024-core NVIDIA Ampere architecture GPU with 32 Tensor Cores
@@ -43,18 +44,13 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 
 </td>
 </tr>
-</table>
-
-#### Particle Photon 2
 
 
-<table>
-<tr>
-<th>Specifications</th>
-<th>Component View</th>
-</tr>
+
 <tr>
 <td>
+
+Particle Photon 2
  
 * Realtek RTL8721DM MCU
   * ARM Cortex M33 CPU
@@ -72,9 +68,6 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 </td>
 </tr>
 </table>
-
-
-
 
 ### Storage
 * 512gb PCIe M.2 Gen3 M-Key x4 NVME
@@ -99,6 +92,6 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 * 12V 25W Solar Cell Array
 
 ## Documentation & Guides
-* [Jetson Orin Flashing](./docs/Flashing_Jetson.pdf)
+* [Jetson Orin Flashing](./docs/Orin_Flashing.md)
 
 Last Updated: 7/19/24

@@ -24,7 +24,7 @@ flashing a Jetson due to its lack in storage capacity.
 A variant of the Jetson Orin Nano, or a variant of the older Jetson Nano (An incomplete list of variants are listed below)
 
 
-<table>
+<table border=1 frame=void rules=rows>
 <tr>
 <th>Variant</th>
 <th>Device View</th>
@@ -32,32 +32,22 @@ A variant of the Jetson Orin Nano, or a variant of the older Jetson Nano (An inc
 <tr>
 <td>
 
-<img width=800/>
- 
 Jetson Orin Nano Developer Kit
 * Dev-22098
   * 8gb Model, without EMMC. Requires an NVME storage device to be installed.
 > **NOTE**  
 > Alternatively use a USB or SD Card, though these devices will be extremely slow and will face accelerated flash degredation in comparison to an NVME and are not recommended.
- 
+
 </td>
 <td>
-
+ 
 <img src="../images/JetsonOrin.png" width="400"/>
 
 </td>
 </tr>
-</table>
 
-<table>
-<tr>
-<th>Variant</th>
-<th>Device View</th>
-</tr>
 <tr>
 <td>
-
-<img width=800/>
 
 Jetson Nano Developer Kit 
 * P3448-0003
@@ -77,20 +67,27 @@ card.
 
 </td>
 </tr>
-</table>
 
-<table>
-<tr>
-<th>Variant</th>
-<th>Device View</th>
-</tr>
 <tr>
 <td>
 
-<img width=800/>
+Jetson Xavier NX Developer Kit
+* (Model number is unknown, but the internal PN is: 812674024318)
+  * 16GB model, with 16GB EMMC.
+
+</td>
+<td>
+
+<img src="../images/flashing/xavier.png" width="400"/>
+
+</td>
+</tr>
+
+<tr>
+<td>
 
 Jetson AGX Orin Developer Kit
-* (Unknown, but the internal PN is: 945-13730-0000-000)
+* (Model number is unknown, but the internal PN is: 945-13730-0000-000)
   * 64GB model, with 64GB EMMC.
 
 </td>
@@ -103,18 +100,13 @@ Jetson AGX Orin Developer Kit
 </table>
 
 
-
-
-<table>
+<table border=1 frame=void rules=rows>
 <tr>
 <th>Component</th>
 <th>Component View</th>
 </tr>
 <tr>
 <td>
-
-<img width=800/>
-
 
 * Standard Computer Jumper
   * These can be borrowed from an old computer motherboard you
@@ -130,24 +122,50 @@ pinch.
 
 </td>
 </tr>
+<tr>
+<td>
+
+(Micro-USB or USB-C) cable
+  * Depending on the model daughterboard to be flashed, a Micro-
+USB or USB-C cable is needed to connect the board to another
+computer.
+
+</td>
+<td>
+
+<img src="../images/flashing/cable.png" width="400"/>
+
+</td>
+</tr>
+
+
+<tr>
+<td>
+ 
+Power Supply (12V barrel jack or Micro-USB or USB-C)
+  * Depending on the model daughterboard to be flashed, a 12V barrel
+jack supply, Micro-USB, or USB-C power supply is necessary to
+ensure a stable power supply while flashing.
+
+</td>
+<td>
+
+<img src="../images/flashing/psu.png" width="400"/>
+
+</td>
+</tr>
 </table>
 
 
 
 
-(Micro-USB or USB-C) cable
-• Depending on the model daughterboard to be flashed, a Micro-
-USB or USB-C cable is needed to connect the board to another
-computer.
-Power Supply (12V barrel jack or Micro-USB or USB-C)
-• Depending on the model daughterboard to be flashed, a 12V barrel
-jack supply, Micro-USB, or USB-C power supply is necessary to
-ensure a stable power supply while flashing.
-Installation Process
+
+## Flashing and Software Installation Process
+
+
 Navigate to https://developer.nvidia.com/sdk-manager and download the .deb file.
-Flashing Nvidia Jetson Nano Developer Kit
-By: Gunnar Fandrich
-April 30, 2023
+
+
 Open a terminal and cd to the location of the downloaded file:
 cd ~/Downloads
 Attempt to install the sdkmanager:
