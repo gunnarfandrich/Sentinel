@@ -6,13 +6,30 @@ The following document details the software behind the Sentinel.
 
 The majority of the Photon Particle 2’s software
 involves communicating with/ controlling the many other
-modules within the Sentinel. When the photon powers on,
+modules within the Sentinel.
+
+### Boot Process
+
+When the Photon P2 powers on,
 the first step is to run the setup function, which
-initializes/begins many different elements of the Sentinel,
-such as the GPIO pins, SPI, UART, and I2C communication
-pins used by the different supporting modules, as well as
-completing other tasks like acquiring a signal for the GPS
-and updating the RTC time. After setup is complete, the
+initializes many different elements of the Sentinel.
+
+#### Communication Initialization
+
+* GPIO Pins
+* SPI Pins
+* UART Pins
+* I2C Pins
+
+The Photon P2 brings the ultimate GPS module online during the communication initialization process. The GPS takes some time to boot, as it must lock onto multiple (typically three) GPS satellite signals to provide accurate location information. Once the required GPS satellite signals are acquired, the real time clock module polls the GPS and updates the device time, if it has fallen out of sync.
+
+### Main Software Loop
+
+Upon finishing initialization, the Photon P2 enters the main program loop.
+
+
+
+After setup is complete, the
 photon will enter the main loop and check if a week has
 passed, meaning the RTC has to be updated with the GPS
 time. If the RTC time is not equal to the GPS time, and the
