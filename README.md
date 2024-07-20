@@ -36,7 +36,7 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
   * 128-bit Width, 68 GB/s
 </td>
 <td>
-![alt](images/JetsonOrin.jpg)
+![alt](./images/JetsonOrin.jpg)
 </td>
 </tr>
 </table>
@@ -60,7 +60,7 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 * Bluetooth Low Energy 5.0
 </td>
 <td>
-![alt](images/photon2.png)
+![alt](./images/photon2.png)
 </td>
 </tr>
 </table>
