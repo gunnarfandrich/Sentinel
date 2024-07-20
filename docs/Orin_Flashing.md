@@ -52,6 +52,16 @@ to be installed to.
 card.
 
 
+Jetson Xavier NX Developer Kit
+* (Model number is unknown, but the internal PN is: 812674024318)
+  * 16GB model, with 16GB EMMC.
+
+
+Jetson AGX Orin Developer Kit
+* (Model number is unknown, but the internal PN is: 945-13730-0000-000)
+  * 64GB model, with 64GB EMMC.
+
+
 </td>
 <td>
 
@@ -59,88 +69,11 @@ card.
 
 <img src="../images/flashing/nano.png" width="400"/>
 
-</td>
-</tr>
-</table>
-
-<table>
-<tr>
-<th>Variant</th>
-<th>Device View</th>
-</tr>
-<tr>
-<td>
-
-<img width=800/>
-
-Jetson Nano Developer Kit 
-* P3448-0003
-  * 2GB model, without EMMC. Requires an SD card for the OS
-to be installed to.
-* P3448-0000
-  * 4GB model, without EMMC. Requires an SD card for the OS
-to be installed to.
-* P3448-0002
-  * 4GB model, with 16GB EMMC. Does NOT require an SD
-card.
-
-</td>
-<td>
-
-<img src="../images/flashing/nano.png" width="400"/>
-
-</td>
-</tr>
-</table>
-
-<table>
-<tr>
-<th>Variant</th>
-<th>Device View</th>
-</tr>
-<tr>
-<td>
-
-<img width=800/>
-
-Jetson Xavier NX Developer Kit
-* (Model number is unknown, but the internal PN is: 812674024318)
-  * 16GB model, with 16GB EMMC.
-
-</td>
-<td>
 
 <img src="../images/flashing/xavier.png" width="400"/>
 
-</td>
-</tr>
-</table>
-
-<table>
-<tr>
-<th>Variant</th>
-<th>Device View</th>
-</tr>
-<tr>
-<td>
-
-<img width=800/>
-
-Jetson AGX Orin Developer Kit
-* (Model number is unknown, but the internal PN is: 945-13730-0000-000)
-  * 64GB model, with 64GB EMMC.
-
-</td>
-<td>
 
 <img src="../images/flashing/orin_agx.png" width="400"/>
-
-</td>
-</tr>
-</table>
-
-
-
 
 <table>
 <tr>
