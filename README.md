@@ -22,21 +22,11 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 
 <table>
 <tr>
-<th></th>
-<th></th>
+<th>Specifications</th>
+<th>Component View</th>
 </tr>
 <tr>
 <td>
-Hi 1
-</td>
-<td>
-HI 2
-</td>
-</tr>
-</table>
-
-
-
 
 * 40 TOPS
 * 1024-core NVIDIA Ampere architecture GPU with 32 Tensor Cores
@@ -46,6 +36,20 @@ HI 2
   * Max Frequency: 1.5 GHz
 * Memory: 8GB LPDDR5
   * 128-bit Width, 68 GB/s
+
+</td>
+<td>
+
+![alt](./images/JetsonOrin.jpg)
+
+</td>
+</tr>
+</table>
+
+
+
+
+
 
 #### Particle Photon 2
 * Realtek RTL8721DM MCU
