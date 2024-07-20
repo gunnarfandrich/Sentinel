@@ -41,7 +41,7 @@ A variant of the Jetson Orin Nano, or a variant of the older Jetson Nano (An inc
 </td>
 <td>
  
-<img src="images/JetsonOrin.png"/>
+<img src="~/images/JetsonOrin.png"/>
 
 </td>
 </tr>
