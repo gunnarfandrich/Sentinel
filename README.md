@@ -39,7 +39,7 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 </td>
 <td>
  
-![alt](./images/JetsonOrin.png)
+<img src="./images/JetsonOrin.png" height="400" />
 
 </td>
 </tr>
@@ -66,8 +66,6 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 
 </td>
 <td>
- 
-[comment]: # ![alt](./images/photon2.png)
 
 <img src="./images/photon2.png" height="400" />
 
