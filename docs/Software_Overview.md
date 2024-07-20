@@ -319,7 +319,7 @@ commented out for the remainder of the Sentinel's field operation
 until changes need to be made to the program.
 
 More information about the frame capture program can be
-found [here](./docs/ImageCaptureProgram.md)
+found [here](./docs/ImageCaptureProgram.md).
 
 
 After compiling the frame capture program, the shell script runs
@@ -375,11 +375,17 @@ by measuring plant features captured by both cameras.
 
 ## AB02S LoRaWAN Software & ThingSpeak
 
-The purpose of the AB02S is to serve as a
-LoRaWAN transmitter to convey select information
-regarding the Sentinel to the users. Currently, the Sentinel is
-transmitting 3 types of information: latitude, longitude, and
-an emergency status. The longitude and latitude are read
+The AB02S LoRaWAN communication module serves as a
+low power means to convey select information
+regarding the Sentinel to its users.
+
+Currently, the Sentinel transmits 3 types of information:
+* Latitude
+* Longitude
+* Emergency Status.
+
+
+The longitude and latitude are read
 from the AIR350Z GPS built directly into the AB02S
 module, and the emergency flag is read as from an input pin
 that is being transmitted from the P2. Due to the limited
@@ -398,6 +404,9 @@ online through the Things Network [7], and the code must
 be updated with the proper gateway identifiers. The code
 was written in C++ following a Heltec template for
 LoRaWAN transmission.
+
+
+
 Because the information is transmitted as a byte
 array, it must be properly decoded at the receiving end. By
 using the Things Network website [7], we are able to view
