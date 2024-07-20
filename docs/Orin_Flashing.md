@@ -21,11 +21,13 @@ flashing a Jetson due to its lack in storage capacity.
 
 ### Required Hardware
 
-A variant of the Jetson Orin Nano, or a variant of the older Jetson Nano (variants are listed below)
+A variant of the Jetson Orin Nano, or a variant of the older Jetson Nano (An incomplete list of variants are listed below)
 
 ** Jetson Orin Nano Developer Kit
 * Dev-22098
-  * 8gb Model, without EMMC. Requires an NVME storage device to be installed. Alternatively use a USB or SD Card, though these devices will be extremely slow and will face extremely flash degredation in comparison to an NVME and are not recommended.
+  * 8gb Model, without EMMC. Requires an NVME storage device to be installed.
+> **NOTE**  
+> Alternatively use a USB or SD Card, though these devices will be extremely slow and will face extremely flash degredation in comparison to an NVME and are not recommended.
 
 ** Jetson Nano Developer Kit 
 * P3448-0003
