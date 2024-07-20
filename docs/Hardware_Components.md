@@ -1,7 +1,31 @@
 # Sentinel Hardware Components
 
-## Devices
+## System Housing & Hardware Assembly Package
+The entire system is housed in two sealed and
+weatherproof PVC junction boxes, consisting of a larger
+bottom box and a smaller top box caulked with waterproof
+silicon to the top. The bottom box contains the 12V battery,
+DFRobot Solar Power Manager, entire system circuitry
+(Particle Photon 2, RTC, LoRaWAN, GPS, E-Ink,
+Watchdog, power switching circuit), and the three buttons.
+The top box contains the two Intel Realsense cameras and
+the Jetson Orin Nano, with a layer of clear acrylic protecting
+the camera lenses. Both boxes contain acrylic bases that
+hold the system in place using nuts and bolts. The bottom
+box contains a couple holes on the side for the buttons, USB
+stick, and cables needed for the system. A layer of silicon
+was also applied around the edges of the cable and USB
+hole for durability and water protection. Additionally, the
+BME280 Temperature/Humidity/Pressure Sensor is housed
+inside a Stevenson screen attached to the top box to allow
+airflow circulation while providing water protection and
+shade from the sun for accurate readings.
 
+<p align="center">
+<img src="../images/hardwareComponents/box.png" width="400"/>
+</p>
+
+## Devices
 
 ### Intel RealSense Depth Camera D415
 In the Mini III’s top PVC box, on either side of the
@@ -256,25 +280,3 @@ and the Orin with the correct voltage.
 <p align="center">
 <img src="../images/hardwareComponents/solar.png" width="400"/>
 </p>
-
-
-## System Housing & Hardware Assembly Package
-The entire system is housed in two sealed and
-weatherproof PVC junction boxes, consisting of a larger
-bottom box and a smaller top box caulked with waterproof
-silicon to the top. The bottom box contains the 12V battery,
-DFRobot Solar Power Manager, entire system circuitry
-(Particle Photon 2, RTC, LoRaWAN, GPS, E-Ink,
-Watchdog, power switching circuit), and the three buttons.
-The top box contains the two Intel Realsense cameras and
-the Jetson Orin Nano, with a layer of clear acrylic protecting
-the camera lenses. Both boxes contain acrylic bases that
-hold the system in place using nuts and bolts. The bottom
-box contains a couple holes on the side for the buttons, USB
-stick, and cables needed for the system. A layer of silicon
-was also applied around the edges of the cable and USB
-hole for durability and water protection. Additionally, the
-BME280 Temperature/Humidity/Pressure Sensor is housed
-inside a Stevenson screen attached to the top box to allow
-airflow circulation while providing water protection and
-shade from the sun for accurate readings.
