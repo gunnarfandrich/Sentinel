@@ -1,14 +1,24 @@
+# Flashing the Jetson Orin Nano & Other/Older Variants
+
+## Introduction
 The Jetson Nano can prove difficult to flash due to the lack of documentation available online. This
 document serves to fill in the gaps and aid in flashing all three developer kit models that exist at the
 time of writing.
-Required Computer/Software
-A device with at least 64GB of storage running Ubuntu (preferably 18.04.X ‘Bionic’) is required to
-flash a Jetson Nano. Other linux distributions may work, though are untested.
-An Nvidia account https://developer.nvidia.com/login
-NOTE: It would be advised to simply install Ubuntu to a removable storage device (such as an SD card
+
+### Required Computer/Software
+* A device with at least 64GB of storage running Ubuntu is required to
+flash a Jetson Nano and its variants. Other linux distributions may work, though are untested.
+
+  * Jetson Orin Nano: Ubuntu 20.04 or 22.04
+  * (Older) Jetson Nano: Ubuntu 18.04
+
+* An Nvidia account https://developer.nvidia.com/login
+
+'''NOTE: It would be advised to simply install Ubuntu to a removable storage device (such as an SD card
 or USB drive) to avoid issues with installing to your main computer. A Live-CD cannot be used for
-flashing a Jetson due to its lack in storage capacity.
-Required Hardware
+flashing a Jetson due to its lack in storage capacity.'''
+
+### Required Hardware
 Jetson Nano Developer Kit (variants are listed below)
 • P3448-0003
 ◦ 2GB model, without EMMC. Requires an SD card for the OS
