@@ -1,7 +1,7 @@
 # Sentinel Hardware Components
 
 ## System Housing & Hardware Assembly Package
-The entire system is housed in two sealed and
+The entire Sentinel system is housed in two sealed and
 weatherproof PVC junction boxes, consisting of a larger
 bottom box and a smaller top box caulked with waterproof
 silicon to the top. The bottom box contains the 12V battery,
@@ -28,7 +28,7 @@ shade from the sun for accurate readings.
 ## Devices
 
 ### Intel RealSense Depth Camera D415
-In the Mini III’s top PVC box, on either side of the
+In the Sentinel's top PVC box, on either side of the
 Jetson Orin Nano, sit two Intel RealSense D415 cameras
 affixed to a bottom plate acrylic using nuts and bolts, and
 facing out through clear acrylic windows. The upgrade from
@@ -42,20 +42,20 @@ of objects in the system’s environment. Depth images, like
 RGB images, are an array of pixels, but instead of each
 pixel containing a color value, each pixel in a depth image
 has a value which represents the distance away from the
-camera [1]. The calculation of these distance values is
+camera. The calculation of these distance values is
 achieved using the stereo vision technique, which simply
 refers to the use of two images in viewing a single
 object/scene, and using the known difference in the
 perspective of these imagers to calculate a numeric value of
 distance away from the imaging pair at every point (or
-pixel) in the scene [1]. The imaging module in the D415
+pixel) in the scene. The imaging module in the D415
 camera consists of a left and right IR imager, an RGB sensor
-integrated next to the right IR imager (when facing the
-camera) for color capture, and an infrared (IR) projector in
-between the left and right imager (see Figure 1). The IR
+integrated next to the right IR imager for color capture,
+and an infrared (IR) projector in
+between the left and right imager . The IR
 project emits an invisible static IR pattern onto the scene
 being captured to enhance texture and improve the depth
-accuracy [1]. All imaging data is sent to the processing
+accuracy. All imaging data is sent to the processing
 module within the D415 camera to perform depth
 calculations.
 
@@ -74,18 +74,18 @@ measuring features of crop growth such as canopy merging,
 stem growth, or internode distance is especially useful when
 growing plants like cotton which require weekly observation
 to determine when plant growth regulator (PGR) application
-is needed [2].
+is needed.
 
 ### NVIDIA Jetson Orin Nano
 The NVIDIA Jetson Orin Nano (Orin for short) is
-another significant hardware upgrade in the Mini III.
-Running on Ubuntu, Orin is the brain of the Mini III system,
+another significant hardware upgrade in the Sentinel.
+Running on Ubuntu, Orin is the brain of the Sentinel system,
 it currently handles the image capture and processing,
 weather input, and saving of all the recorded data. Most
 importantly, it will run the AI model once built. Compared
-to the Jetson Nano in the Sentinel Mini II, the Orin has
-“5.4x the CUDA compute, 6.6x the CPU performance, and
-50x the performance per watt” [3], bringing the Sentinel
+to the Jetson Nano in the Original Sentinel, the Orin has
+5.4x the CUDA compute power, 6.6x the CPU performance, and
+roughly 50x the performance per watt, bringing the Sentinel
 project to the cutting edge of AI platforms.
 The immense processing power of the Orin comes
 at the cost of large power consumption, challenging the
@@ -110,7 +110,7 @@ through the browser-based IDE via Wi-Fi, or programmed
 using software like Visual Studio Code and flashed via
 USB. With 2MB of memory, the device is more than
 capable of running a sophisticated system such as the
-sentinel mini. This device serves as the main controller for
+Sentinel. This device serves as the main controller for
 the Sentinel, communicating with/ enabling many other
 devices to create a working system. The P2 reads time from
 the RTC, reads positional data from the GPS, controls the
@@ -127,14 +127,14 @@ external modules like the GPS and RTC.
 ### AB02S LoRaWAN Module
 The Cube Cell HTTC-AB02S is a
 LoRaWAN-specific development board with a built-in GPS.
-LoRaWAN is a “Low Power, Wide Area (LPWA)”
+LoRaWAN is a Low Power, Wide Area (LPWA)
 networking protocol that is used to keep battery power
 devices connected to the internet when direct Wi-Fi
-connection is not an option [4]. Because the Sentinel will be
+connection is not an option. Because the Sentinel will be
 deployed in a rural crop field for extended periods of time,
 LoRaWAN is useful for transmitting information to
 gateways up to 10 kilometers away, while operating in low
-power mode for efficient energy usage [5]. The device is
+power mode for efficient energy usage. The device is
 arduino compatible, and was once again programmed using
 C++ to serve as a LoRaWAN transmitter. Currently, the only
 communication between the Photon and the AB02S is a
@@ -152,7 +152,8 @@ The BME280 is an environmental temperature,
 humidity, and barometric pressure sensor from Adafruit. It
 is connected directly to the Orin using I2C communication
 and it transmits its data to be saved whenever the Orin boots
-up (see Software section). The weather data captured from
+up see [Sentinel Software Overview](./docs/Software_Overview.md) for more information.
+The weather data captured from
 this sensor adds to the data set that will eventually be used
 to train the AI model.
 
@@ -212,7 +213,7 @@ is still legible in most cases.
 </p>
 
 ### Microcontroller Managed Power Switch
-For a system like the Sentinel Mini III where it is
+For a system like the Sentinel where it is
 meant to remain functional for months at a time without
 human aid, power management is of the utmost importance.
 Although the large 12V battery will be continuously charged
@@ -221,8 +222,8 @@ Orin module would quickly run the battery dead and render
 the system inoperable if left continuously running.
 Therefore, it is necessary to create a system in which the
 Orin, and other power draining sources that aren’t always
-needed, can be switched off and on at will. Thus, the Mini
-III system has two power switches managed by the Particle
+needed, can be switched off and on at will. Thus, the Sentinel
+system has two power switches managed by the Particle
 Photon 2. The first controls the 12V power to the Orin, and
 the second controls the 5V power to the LoRaWAN module.
 They both operate exactly the same, the only difference is
