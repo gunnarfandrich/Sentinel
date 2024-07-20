@@ -14,8 +14,8 @@ flash a Jetson Nano and its variants. Other linux distributions may work, though
 
 * An Nvidia account https://developer.nvidia.com/login
 
-**NOTE**  
-It would be advised to simply install Ubuntu to a removable storage device (such as an SD card
+> **NOTE**  
+> It would be advised to simply install Ubuntu to a removable storage device (such as an SD card
 or USB drive) to avoid issues with installing to your main computer. A Live-CD cannot be used for
 flashing a Jetson due to its lack in storage capacity.'''
 
