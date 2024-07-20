@@ -75,6 +75,7 @@ Particle Photon 2
 ### Connectivity
 * 802.11AC WiFi
 * LoRaWAN
+* GPS
 * (Not currently in use) Bluetooth 5.0
 * (One) RJ45 Gigabit Ethernet Connection
 
