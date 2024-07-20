@@ -41,7 +41,7 @@ Jetson Orin Nano Developer Kit
 </td>
 <td>
  
-<img src="../images/JetsonOrin.png"/>
+<img src="../images/JetsonOrin.png" width=400/>
 
 </td>
 </tr>
