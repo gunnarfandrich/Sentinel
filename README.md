@@ -19,7 +19,6 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 ### Compute
 #### Jetson Orin Nano Developer Kit
 
-
 <table>
 <tr>
 <th>Specifications</th>
@@ -27,7 +26,6 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 </tr>
 <tr>
 <td>
-
 * 40 TOPS
 * 1024-core NVIDIA Ampere architecture GPU with 32 Tensor Cores
 * GPU: 625 MHz
@@ -36,22 +34,23 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
   * Max Frequency: 1.5 GHz
 * Memory: 8GB LPDDR5
   * 128-bit Width, 68 GB/s
-
 </td>
 <td>
-
 ![alt](./images/JetsonOrin.jpg)
-
 </td>
 </tr>
 </table>
 
-
-
-
-
-
 #### Particle Photon 2
+
+
+<table>
+<tr>
+<th>Specifications</th>
+<th>Component View</th>
+</tr>
+<tr>
+<td>
 * Realtek RTL8721DM MCU
   * ARM Cortex M33 CPU
   * Max Frequency: 200 MHz
@@ -59,6 +58,15 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
   * Program Storage: 2048 KB
 * 802.11a/b/g/n Wi-Fi, 2.4 GHz and 5 GHz
 * Bluetooth Low Energy 5.0
+</td>
+<td>
+![alt](./images/photon2.png)
+</td>
+</tr>
+</table>
+
+
+
 
 ### Storage
 * 512gb PCIe M.2 Gen3 M-Key x4 NVME
