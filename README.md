@@ -60,7 +60,7 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 * Bluetooth Low Energy 5.0
 </td>
 <td>
-![alt1](./images/photon2.png)
+![alt](./images/photon2.png)
 </td>
 </tr>
 </table>
