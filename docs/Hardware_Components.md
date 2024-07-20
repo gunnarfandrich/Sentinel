@@ -110,7 +110,7 @@ through the browser-based IDE via Wi-Fi, or programmed
 using software like Visual Studio Code and flashed via
 USB. With 2MB of memory, the device is more than
 capable of running a sophisticated system such as the
-sentinel mini. This device serves as the main controller for
+Sentinel. This device serves as the main controller for
 the Sentinel, communicating with/ enabling many other
 devices to create a working system. The P2 reads time from
 the RTC, reads positional data from the GPS, controls the
@@ -222,8 +222,8 @@ Orin module would quickly run the battery dead and render
 the system inoperable if left continuously running.
 Therefore, it is necessary to create a system in which the
 Orin, and other power draining sources that aren’t always
-needed, can be switched off and on at will. Thus, the Mini
-III system has two power switches managed by the Particle
+needed, can be switched off and on at will. Thus, the Sentinel
+system has two power switches managed by the Particle
 Photon 2. The first controls the 12V power to the Orin, and
 the second controls the 5V power to the LoRaWAN module.
 They both operate exactly the same, the only difference is
