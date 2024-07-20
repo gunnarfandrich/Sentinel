@@ -81,6 +81,32 @@ card.
 
 <table>
 <tr>
+<th>Variant</th>
+<th>Device View</th>
+</tr>
+<tr>
+<td>
+
+<img width=800/>
+
+Jetson AGX Orin Developer Kit
+* (Unknown, but the internal PN is: 945-13730-0000-000)
+  * 64GB model, with 64GB EMMC.
+
+</td>
+<td>
+
+<img src="../images/flashing/orin_agx.png" width="400"/>
+
+</td>
+</tr>
+</table>
+
+
+
+
+<table>
+<tr>
 <th>Component</th>
 <th>Component View</th>
 </tr>
