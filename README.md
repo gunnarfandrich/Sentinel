@@ -39,7 +39,7 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 </td>
 <td>
  
-![alt](./images/JetsonOrin.jpg)
+![alt](./images/JetsonOrin.png)
 
 </td>
 </tr>
