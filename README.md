@@ -94,6 +94,9 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 * Jetson: 7W to 15W, dependent on CPU power configuration.
 * Particle: 2.5W, theoretical maximum
 
+### Power Supply
+* 12V AGM 6AH Battery
+* 12V 25W Solar Cell Array
 
 ## Documentation
 * [Jetson Orin Flashing](./docs/Flashing_Jetson.pdf)
