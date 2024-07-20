@@ -1,4 +1,4 @@
-<center> <h1>Sentinel 1</h1> </center>
+<center> <h1>Sentinel</h1> </center>
 
 The Sentinel project aims to create an all-encompassing, deployable field solution to monitor plant growth and crop disease over extended periods of time.
 
