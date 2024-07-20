@@ -38,7 +38,7 @@ Jetson Orin Nano Developer Kit
 * Dev-22098
   * 8gb Model, without EMMC. Requires an NVME storage device to be installed.
 > **NOTE**  
-> Alternatively use a USB or SD Card, though these devices will be extremely slow and will face extremel flash degredation in comparison to an NVME and are not recommended.
+> Alternatively use a USB or SD Card, though these devices will be extremely slow and will face accelerated flash degredation in comparison to an NVME and are not recommended.
  
 </td>
 <td>
@@ -79,16 +79,34 @@ card.
 </tr>
 </table>
 
+<table>
+<tr>
+<th>Component</th>
+<th>Component View</th>
+</tr>
+<tr>
+<td>
 
-
-
+<img width=800/>
 
 
 * Standard Computer Jumper
-• These can be borrowed from an old computer motherboard you
+  * These can be borrowed from an old computer motherboard you
 may have laying around.
-◦ NOTE: A Female to Female breadboard wire will work in a
+> **NOTE**  
+>  A Female to Female breadboard wire will work in a
 pinch.
+
+</td>
+<td>
+
+<img src="../images/flashing/jumper.png" width="400"/>
+
+</td>
+</tr>
+</table>
+
+
 
 
 (Micro-USB or USB-C) cable
