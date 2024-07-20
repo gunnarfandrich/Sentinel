@@ -70,6 +70,7 @@ card.
 
 </td>
 <td>
+ 
 <img width=500/>
 
 <img src="../images/flashing/nano.png" width="400"/>
