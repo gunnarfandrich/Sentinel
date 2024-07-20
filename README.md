@@ -1,5 +1,5 @@
 <p align="center">
-Sentinel
+# Sentinel
 </p>
 
 The Sentinel project aims to create an all-encompassing, deployable field solution to monitor plant growth and crop disease over extended periods of time.
