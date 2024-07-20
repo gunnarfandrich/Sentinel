@@ -363,7 +363,8 @@ cp -a /home/nvidia/Documents/sentinel_home/PlantPictures/TakenImages /USB_Transf
 
 In addition to the startup code, other
 software was utilized in experimentation that came
-directly from [Intel’s RealSense code repository](). This includes the Intel
+directly from
+[Intel’s RealSense code repository](https://github.com/IntelRealSense/librealsense). This includes the Intel
 RealSense SDK which was used to gather high quality RGB
 and depth data of field and greenhouse plants, the
 librealsense convert tool (rs-convert.cpp), used to convert
