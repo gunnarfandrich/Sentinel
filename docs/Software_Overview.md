@@ -372,12 +372,6 @@ librealsense measure tool (rs-measure.cpp) which was used
 to verify the accuracy of the cameras’ depth measurements
 by measuring plant features captured by both cameras.
 
-
-
-
-
-
-
 ## AB02S LoRaWAN Software & ThingSpeak
 
 The purpose of the AB02S is to serve as a
