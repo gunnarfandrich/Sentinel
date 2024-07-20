@@ -99,6 +99,6 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 * 12V 25W Solar Cell Array
 
 ## Documentation & Guides
-* [Jetson Orin Flashing](./docs/Flashing_Jetson.pdf)
+* [Jetson Orin Flashing](./docs/Orin_Flashing.md)
 
 Last Updated: 7/19/24
