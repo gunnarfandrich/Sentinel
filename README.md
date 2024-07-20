@@ -98,7 +98,7 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 * 12V AGM 6AH Battery
 * 12V 25W Solar Cell Array
 
-## Documentation
+## Documentation & Guides
 * [Jetson Orin Flashing](./docs/Flashing_Jetson.pdf)
 
 Last Updated: 7/19/24
