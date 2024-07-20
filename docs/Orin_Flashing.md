@@ -31,6 +31,8 @@ A variant of the Jetson Orin Nano, or a variant of the older Jetson Nano (An inc
 </tr>
 <tr>
 <td>
+
+<img width=500/>
  
 Jetson Orin Nano Developer Kit
 * Dev-22098
@@ -54,6 +56,8 @@ Jetson Orin Nano Developer Kit
 </tr>
 <tr>
 <td>
+
+<img width=500/>
 
 Jetson Nano Developer Kit 
 * P3448-0003
