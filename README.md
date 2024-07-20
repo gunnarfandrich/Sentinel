@@ -67,7 +67,7 @@ The Sentinel project aims to create an all-encompassing, deployable field soluti
 </td>
 <td>
 
-<img src="./images/photon2.png" height="400" />
+<img src="./images/photon2.png" height="200" />
 
 </td>
 </tr>
