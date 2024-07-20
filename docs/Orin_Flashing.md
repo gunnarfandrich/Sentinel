@@ -40,7 +40,9 @@ Jetson Orin Nano Developer Kit
  
 </td>
 <td>
- 
+
+<img width=500/>
+
 <img src="../images/JetsonOrin.png" width="400"/>
 
 </td>
@@ -68,7 +70,8 @@ card.
 
 </td>
 <td>
- 
+<img width=500/>
+
 <img src="../images/flashing/nano.png" width="400"/>
 
 </td>
