@@ -32,8 +32,6 @@ A variant of the Jetson Orin Nano, or a variant of the older Jetson Nano (An inc
 <tr>
 <td>
  
-<img width=800/>
- 
 Jetson Orin Nano Developer Kit
 * Dev-22098
   * 8gb Model, without EMMC. Requires an NVME storage device to be installed.
@@ -56,8 +54,6 @@ Jetson Orin Nano Developer Kit
 </tr>
 <tr>
 <td>
-
-<img width=800/>
 
 Jetson Nano Developer Kit 
 * P3448-0003
