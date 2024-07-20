@@ -319,7 +319,7 @@ commented out for the remainder of the Sentinel's field operation
 until changes need to be made to the program.
 
 More information about the frame capture program can be
-found [here](./docs/ImageCaptureProgram.md).
+found [here](./ImageCaptureProgram.md).
 
 
 After compiling the frame capture program, the shell script runs
