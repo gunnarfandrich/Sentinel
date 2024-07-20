@@ -24,7 +24,7 @@ flashing a Jetson due to its lack in storage capacity.
 A variant of the Jetson Orin Nano, or a variant of the older Jetson Nano (An incomplete list of variants are listed below)
 
 
-<table>
+<table border=1 frame=void rules=rows>
 <tr>
 <th>Variant</th>
 <th>Device View</th>
