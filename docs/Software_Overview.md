@@ -379,10 +379,30 @@ The AB02S LoRaWAN communication module serves as a
 low power means to convey select information
 regarding the Sentinel to its users.
 
+### Location Acquisition
+
 Currently, the Sentinel transmits 3 types of information:
 * Latitude
 * Longitude
 * Emergency Status.
+
+Said information is gathered on boot.
+```c
+if (test_coord == 1)
+{
+    lng_int_part = -82;
+    lng_tmp=lng_int_part;
+    lng_int_part=abs(lng_int_part);
+    lng_frac_part=348025;
+    
+    lat_int_part = 29;
+    lat_tmp=lat_int_part;
+    lat_int_part = abs(lat_int_part);
+    lat_frac_part=643979;
+  }
+  GPS.begin();
+  EMERGENCY_PIN_CHECK();
+```
 
 
 The longitude and latitude are read
@@ -392,49 +412,115 @@ that is being transmitted from the P2. Due to the limited
 bandwidth of LoRaWAN transmission, the longitude and
 latitude are encoded into a byte array, with the integer part
 of the number in one byte, and the decimal values in the
-following 3 bytes. Since the bytes are being sent as unsigned
+following 3 bytes.
+
+Since the bytes are being sent as unsigned
 integers, the program will also dedicate one byte to indicate
-whether the value is positive or negative. Similarly, the
+whether the value is positive or negative.
+Similarly, the
 program reads the emergency flag pin, and uses a single
 byte to indicate whether the flag is reading 1 or 0. This gives
 a total of 11 bytes per message, sent every 15 seconds when
-the LoRaWAN device is powered on and connected. To
-connect the device to the gateway, it must be registered
-online through the Things Network [7], and the code must
+the LoRaWAN device is powered on and connected.
+
+To connect the device to the gateway, it must be registered
+online through the Things Network, and the code must
 be updated with the proper gateway identifiers. The code
 was written in C++ following a Heltec template for
 LoRaWAN transmission.
 
-
-
-Because the information is transmitted as a byte
+As the information is transmitted as a byte
 array, it must be properly decoded at the receiving end. By
-using the Things Network website [7], we are able to view
+using the Things Network website, users are able to view
 in real-time the data being sent from the Sentinel, but only
 in the form of a byte array, which is meaningless without the
-proper decoding. This is where the uplink payload formatter
-is implemented, which transforms our byte array back into
-usable information. Using just a few lines of javascript, we
-can use the location of the bytes in the array to determine
-whether they are representing the values of the longitude,
-latitude, or emergency flag status.
+proper decoding.
+
+### Uplink Payload Formatter
+
+To view the data in a meaningful way, an uplink payload formatter
+is utilized. The uplink payload formatter is written in javascript.
+
+```c
+// This javascript code is used to decode the byte array containing GPS data from the Sentinel.
+function Decoder(bytes)
+{
+  // Decode an uplink message from a buffer
+  var decoded = {};
+
+  // Decode longitude
+  var lng_frac_part = (bytes[0] | (bytes[1] << 8) | bytes[2] << 16);
+  var lng_int_part = (bytes[3]);
+  if (bytes[4] === 0xFF ){ //field 1
+    decoded.lng = -1 * (lng_int_part + lng_frac_part / 1e6);
+  } else {
+    decoded.lng = (lng_int_part + lng_frac_part / 1e6);
+  }
+  
+  // Decode latitude
+  var lat_frac_part = (bytes[5] | (bytes[6] << 8) | bytes[7] << 16);
+  var lat_int_part = (bytes[8]);
+  if (bytes[9] === 0xFF ){ // field 2
+    decoded.lat = -1 * (lat_int_part + lat_frac_part / 1e6);
+  } else {
+    decoded.lat = (lat_int_part + lat_frac_part / 1e6);
+  }
+  // button state
+  if (bytes[10] === 0x00){
+    decoded.button = 0; //not pressed
+  } else if (bytes[10] == 0xFF){
+    decoded.button = 1; //pressed
+  }
+
+  //return decoded;
+  return {
+  field1: decoded.lng,
+  field2: decoded.lat,
+  field3: decoded.button,
+  };
+}
+```
+
+### Thingspeak Webhook
+
 To create a more user-friendly environment for
-viewing the LoRaWAN data, we integrated a webhook to
-the ThingSpeak website [8]. Creating this webhook allows
-the ThingsNetwork to automatically update our channel as it
-receives data. By creating a public channel, information
+viewing the LoRaWAN data, a webhook was integrated into
+the ThingSpeak website.
+
+```c
+// This code is used to send e-mails to the user. 
+// Combine with 'react' to set up automatic emailing. 
+ 
+% Channel IDs and ReadAPI Keys
+channel_ID = XXXXXX; // your channelID goes here
+readAPIKey = 'XXXXXXXXXXXXXX'; // your readAPIKey goes here
+
+lon_num = thingSpeakRead(channel_ID, 'ReadKey', readAPIKey, 'Fields', [1]);
+lat_num = thingSpeakRead(channel_ID, 'ReadKey', readAPIKey, 'Fields', [2]);
+lon_str = num2str(lon_num,'%.5f');
+lat_str = num2str(lat_num,'%.5f');
+alert_body = ['Emergency flag triggered!\nCurrent Position:\nLongitude: ' lon_str '\nLatitude: ' lat_str ''];
+alert_subject = 'SENTINEL ALERT';
+alert_api_key = 'XXXXXXXXXXXXXX'; // your alert API key goes here (should start with TAK)
+alert_url= "https://api.thingspeak.com/alerts/send";
+jsonmessage = sprintf(['{"subject": "%s", "body": "%s"}'], alert_subject,alert_body);
+options = weboptions("HeaderFields", {'Thingspeak-Alerts-API-Key', alert_api_key; 'Content-Type','application/json'});
+result = webwrite(alert_url, jsonmessage, options);
+```
+
+As seen in the code snippet above, this webhook allows
+the ThingsNetwork to automatically update the selected channel
+as it receives data. By creating a public channel, information
 could be made available to anyone with a link to the
 channel, making it easy for multiple users to monitor the
 Sentinel.
-Figure 4: Sentinel ThingSpeak channel
-Additionally, implementing the ThingSpeak
-channel allows us to create custom e-mail alerts. Using the
-‘Matlab Analysis’ tool allows us to send e-mails to the user
-once a specific condition in the channel has been met. In
-this case, we are triggering an e-mail alert once the
+
+The webhook also permits the creation of custom e-mail alerts.
+Using the ‘Matlab Analysis’ tool allows users to send e-mails
+to the user once a specific condition in the channel has been met.
+In this case, an e-mail alert is triggered once the
 emergency flag variable is equal to 1. In future iterations,
 the e-mail alert could be a very powerful tool when
 combined with the AI learning onboard the Jetson. In the
-body of the e-mail, we include the longitude and latitude by
-reading directly from the channel.
-Figure 5: E-mail alert using example GPS data
+body of the e-mail, longitude and latitude data is transcribed
+by reading directly from the channel.
