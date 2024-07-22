@@ -99,4 +99,4 @@ Particle Photon 2
 * [Sentinel Machine Learning Overview](./docs/MachineLearningOverview.md)
 * [Sentinel Image Capture Program](./docs/ImageCaptureProgram.md)
 
-Last Updated: 7/20/24
+Last Updated: 7/22/24
