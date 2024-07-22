@@ -6,7 +6,7 @@ The Jetson Orin Nano is quite capable of processing machine learning data in rea
 * Access to [roboflow](https://app.roboflow.com)
     * An account can be made for free in a few minutes.
 * [roboflow inference](https://github.com/roboflow/inference)
-    * Pre-built binaries are not currently available for the ARM64 architecture. ARM64 binaries will need to be built from source.
+    * Pre-built binaries are not currently available for the ARM64 architecture. ARM64 binaries will need to be built from source. Alternatively, a pre-made docker image can be utilized.
 
 ## Roboflow Setup and Model Training
 
@@ -50,3 +50,6 @@ A good textbook to read for those wanting to learn more information about machin
 > **NOTE**
 > The writers of this textbook have in NO WAY endorsed or even acknowledged this github repository. This textbook is provided as a reference ONLY.
 
+## Local Model Execution on Jetson Orin Nano
+
+The maintainers of roboflow were kind enough to provide a good write-up of the process to run roboflow-inference on the Jetson Orin Nano can be found [here](https://blog.roboflow.com/license-plate-detection-jetson/).
