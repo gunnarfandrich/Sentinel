@@ -27,6 +27,8 @@ Before capturing any frames, the D415 cameras must be initialized.
 
 As seen in the code snippet above, to initialize the cameras, first a pre-made configuration is loaded as well as a pre-defined pipeline. The camera serial number is next entered to explicitly assign each camera to the camera's corresponding pipeline. Finally, the camera is assigned depth and color formats, as well as a stream resolution.
 
+## Frame Pipeline
+
 After configuring the cameras, the Jetson Nano will attempt to open the pipeline for each camera.
 
 ```c++
@@ -63,6 +65,8 @@ break;
 
 When attempting to open the pipeline, if any errors occur, they are caught and output to users via the terminal.
 
+## Configuring and Capturing Frames
+
 Next, camera data is configured and video frames are captured.
 
 ```c++
@@ -88,6 +92,8 @@ rs2::depth_frame depth_frame_2 = frames_2.get_depth_frame();
 ```
 
 As seen in the code snipped above, data in each pipeline is first aligned to pre-defined stream color and depth configurations.
+
+## Processing Frame Data
 
 The program then waits for frames and upon their acquisition the frames are processed for color and depth information.
 
@@ -122,6 +128,8 @@ applyColorMap(depth_frame_2_mat_8UC3, depth_frame_2_CM, cv::COLORMAP_JET);
 ```
 
 As seen in the code snippet above, matrices are first created to store color and depth information. The frames are then converted to matrices and stored in said storage matrices. The data is the depth matrices is then mapped to 8UC3 and the data in the color matrices has a color map applied to it.
+
+## Exporting Frames to Local Storage
 
 Finally, the program outputs the captured images with the corresponding capture time appended to the file name.
 ```c++
