@@ -52,4 +52,4 @@ A good textbook to read for those wanting to learn more information about machin
 
 ## Local Model Execution on Jetson Orin Nano
 
-The maintainers of roboflow were kind enough to provide a good write-up of the process to run roboflow-inference on the Jetson Orin Nano. The tutorial can be found [here](https://blog.roboflow.com/license-plate-detection-jetson/).
+The maintainers of roboflow were kind enough to provide a good write-up of the process to run roboflow-inference on the Jetson Orin Nano. The write-up can be found [here](https://blog.roboflow.com/license-plate-detection-jetson/).
