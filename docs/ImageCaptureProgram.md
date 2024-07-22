@@ -159,3 +159,41 @@ std::cout << "Images successfully saved\n\n";
 ```
 
 As seen in the code snippet, the program gathers the system time and outputs the captured images to the home directory of the Sentinel and two nested sub folders, "PlantPictures" and "TakenImages".
+
+## Example Captured Images
+
+### Depth and RGB Mapped Images
+
+Some depth and RGB images captured during the development of this script are seen below. In particular, a brocoli plant was used during experimentation.
+
+<img src="../images/d415Experiments/depthBrocoliColorMapping.jpg"/>
+
+Above, a depth color mapping is seen on a brocoli plant.
+
+<img src="../images/d415Experiments/depthBrocoliRGBMapping.jpg"/>
+
+Above, the RGB version of the previous image is seen.
+
+### Height and Length Measurement Images
+
+During experimentation, Intel's rs-measure tool was built from source. The tool enables the measurement of distance in captured frames. Some examples of measuring height and length are seen below.
+
+#### Height Measurement
+
+<img src="../images/d415Experiments/heightBrocoli1.jpg"/>
+
+Measurements were first performed manually, and then with the D415 camera and accompanying software.
+
+<img src="../images/d415Experiments/heightBrocoli2.jpg"/>
+
+#### Length Measurement
+
+<img src="../images/d415Experiments/lengthBrocoli1.jpg"/>
+
+As before, measurements were first performed manually, and then with the D415 camera and accompanying software.
+
+<img src="../images/d415Experiments/lengthBrocoli2.jpg"/>
+
+## Experimental Summary
+
+The experimental measurement method via image capture is promising. Such data could automatically be extracted and utilized in future machine learning model implementations.
