@@ -96,6 +96,7 @@ Particle Photon 2
 * [Jetson Orin Flashing](./docs/Orin_Flashing.md)
 * [Sentinel Hardware Components](./docs/Hardware_Components.md)
 * [Sentinel Software Overview](./docs/Software_Overview.md)
+* [Sentinel Machine Learning Overview](./docs/MachineLearningOverview.md)
 * [Sentinel Image Capture Program](./docs/ImageCaptureProgram.md)
 
 Last Updated: 7/20/24
