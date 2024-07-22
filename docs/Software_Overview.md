@@ -487,7 +487,7 @@ To create a more user-friendly environment for
 viewing the LoRaWAN data, a webhook was integrated into
 the ThingSpeak website.
 
-```c
+```txt
 // This code is used to send e-mails to the user. 
 // Combine with 'react' to set up automatic emailing. 
  
