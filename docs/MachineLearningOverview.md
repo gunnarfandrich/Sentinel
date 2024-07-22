@@ -46,7 +46,7 @@ After all the prior setup steps have been completed, users can generate their mo
 
 As seen in the image above, prior to model creation, users can select desired data preprocessing and data augmentation. For users new to machine learning in general, it would be wise to use minimum data preprocessing and augmentation.
 
-A good textbook to read for those wanting to learn more information about machine learning in general can be found [here](https://www.amazon.com/Python-Machine-Learning-scikit-learn-TensorFlow-dp-1789955750/dp/1789955750/ref=dp_ob_title_bk). This book is recommended for those with a strong knowledge of statistics and linear algebra.
+A good textbook to read for those wanting to learn more information about machine learning in general can be found [here](https://www.amazon.com/Python-Machine-Learning-scikit-learn-TensorFlow-dp-1789955750/dp/1789955750/ref=dp_ob_title_bk). The book ISBN-10 is: 1789955750 (this information is provided in the event the link ever becomes obselete). This book is recommended for those with a strong knowledge of statistics and linear algebra.
 > **NOTE**
 > The writers of this textbook have in NO WAY endorsed or even acknowledged this github repository. This textbook is provided as a reference ONLY.
 
